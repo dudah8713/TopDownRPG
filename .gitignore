@@ -1,14 +1,46 @@
-Aura.sln
-Aura.uproject
-*.uasset
-*.dll
+# UE5 specific folders and files
+# Binaries와 Intermediate 폴더는 컴파일된 파일들이므로 무시합니다.
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vscode/
+
+# 프로젝트 설정 파일과 관련된 캐시 파일
+*.log
+*.tmp
+*.db
+*.suo
+*.user
+*.userprefs
+*.users
+*.pidb
 *.pdb
-*.modules
-*.ini
-*.rsp
-\Content\Assets
-\.vs
-\Config
-\Intermediate
-\Saved
-\DerivedDataCache
+*.opendb
+*.VC.db
+
+# 설정 파일 중 필요없는 파일
+*.sln
+*.csproj
+*.vcxproj
+*.pfx
+
+# 빌드 아티팩트
+*.dll
+*.exe
+*.app
+*.dylib
+*.icns
+*.lib
+*.a
+*.so
+
+# MacOS 시스템 파일
+.DS_Store
+
+# Windows 시스템 파일
+Thumbs.db
+
+# Plugin 디렉토리의 일부 파일
+**/Plugins/*/Binaries/
+**/Plugins/*/Intermediate/
