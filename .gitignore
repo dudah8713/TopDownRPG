@@ -1,8 +1,8 @@
 Aura.sln
 Aura.uproject
-W:\TopDownRPG\Content\Assets
-W:\TopDownRPG\.vs
-W:\TopDownRPG\Config
-W:\TopDownRPG\Intermediate
-W:\TopDownRPG\Saved
-W:\TopDownRPG\DerivedDataCache
+\Content\Assets
+\.vs
+\Config
+\Intermediate
+\Saved
+\DerivedDataCache
