@@ -6,6 +6,9 @@ Intermediate/
 Saved/
 .vscode/
 
+# Visual Studio 관련 파일
+
+
 # 프로젝트 설정 파일과 관련된 캐시 파일
 *.log
 *.tmp
@@ -17,6 +20,9 @@ Saved/
 *.pidb
 *.pdb
 *.opendb
+.vs/
+*.vcxproj.user
+*.ipch
 *.VC.db
 
 # 설정 파일 중 필요없는 파일
