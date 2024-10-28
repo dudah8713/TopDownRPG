@@ -1,5 +1,11 @@
 Aura.sln
 Aura.uproject
+*.uasset
+*.dll
+*.pdb
+*.modules
+*.ini
+*.rsp
 \Content\Assets
 \.vs
 \Config
