@@ -7,6 +7,8 @@
 #include "AbilitySystemComponent.h"
 #include "AuraAttributeSet.generated.h"
 
+
+// 이 매크로는 GameplayAttribute의 속성을 접근하고 설정하기 위한 다양한 함수들을 자동으로 생성합니다
 #define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
  	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
  	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
@@ -25,6 +27,8 @@ public:
 	UAuraAttributeSet();
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+	// ReplicatedUsing: 속성이 복제(Replicate)될 때 호출될 함수를 지정합니다.
+	// ReplicatedUsing = OnRep_Health은 Health 속성이 변경되었을 때 OnRep_Health 함수를 호출하도록 설정합니다.
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Health, Category = "Vital Attributes")
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, Health);
@@ -41,8 +45,11 @@ public:
 	FGameplayAttributeData MaxMana;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, MaxMana);
 
+
+	// Health 속성이 네트워크에서 복제될 때 호출되는 함수입니다
 	UFUNCTION()
 	void OnRep_Health(const FGameplayAttributeData& OldHealth) const ;
+
 	UFUNCTION()
 	void OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth) const ;
 
