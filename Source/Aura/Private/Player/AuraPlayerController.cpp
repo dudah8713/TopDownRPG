@@ -25,7 +25,10 @@ void AAuraPlayerController::BeginPlay()
 
 	// 로컬 플레이어 서브시스템인 UEnhancedInputLocalPlayerSubsystem을 가져옵니다.
 	UEnhancedInputLocalPlayerSubsystem* SubSystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
-	check(SubSystem);
+	if (SubSystem)
+	{
+		SubSystem->AddMappingContext(AuraContext, 0);
+	}
 
 	// 입력 매핑 컨텍스트(AuraContext)를 서브시스템에 추가합니다.
     // 이는 특정 입력(키보드, 마우스, 게임패드 등)에 대해 정의된 행동들을 설정하고 적용하는 역할을 합니다.
